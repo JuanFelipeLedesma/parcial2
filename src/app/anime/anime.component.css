@@ -1,0 +1,13 @@
+.container {
+    margin-top: 2rem;
+  }
+  
+  .img-fluid {
+    max-height: 20rem;
+    object-fit: cover;
+  }
+  
+  .row dt {
+    font-weight: bold;
+  }
+  

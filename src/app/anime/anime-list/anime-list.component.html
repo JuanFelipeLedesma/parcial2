@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h1>Animes</h1>
+  <div class="row">
+    <div class="col-sm-4 mb-3" *ngFor="let anime of animes">
+      <div class="card">
+        <img [src]="anime.image" class="card-img-top" alt="{{anime.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{anime.name}}</h5>
+          <p class="card-text">Categoría: {{anime.category}}</p>
+          <p class="card-text">Rating: {{anime.rating}} ⭐</p>
+          <a href="#" class="btn btn-primary" (click)="selectAnime(anime)">Más información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4">
+    <p>Average Rating: {{averageRating | number:'1.1-1'}}</p>
+    <p>Total Episodes: {{totalEpisodes}}</p>
+  </div>
+</div>
+<app-detalle-anime *ngIf="selectedAnime" [anime]="selectedAnime"></app-detalle-anime>

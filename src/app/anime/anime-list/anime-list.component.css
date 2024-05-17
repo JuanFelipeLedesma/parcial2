@@ -1,0 +1,21 @@
+.container {
+    margin-top: 2rem;
+  }
+  
+  .card {
+    height: 100%;
+  }
+  
+  .card-img-top {
+    height: 15rem;
+    object-fit: cover;
+  }
+  
+  .row {
+    justify-content: center;
+  }
+  
+  .mt-4 p {
+    font-weight: bold;
+  }
+  

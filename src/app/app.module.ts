@@ -1,18 +1,23 @@
-import { NgModule } from '@angular/core';
+import { ApplicationRef, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AnimeService } from './anime/anime.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    AppComponent
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AnimeService]
 })
-export class AppModule { }
+export class AppModule {
+  ngDoBootstrap(appRef: ApplicationRef) {
+    appRef.bootstrap(AppComponent);
+  }
+}
